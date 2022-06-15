@@ -1,5 +1,5 @@
-<h1 align="center">Hi 👋, I'm Nazar</h1>
-<h3 align="center">iOS Application Developer</h3>
+<h1 align="left">Hi 👋, I'm Nazar</h1>
+<h3 align="left">iOS Application Developer</h3>
 
 - 🔭 I’m currently working on [CV Maker](https://github.com/NazarWelkakayew/CV-Maker)
 
