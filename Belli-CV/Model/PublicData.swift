@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct PublicData{
-    @AppStorage("something") public var something: String = "something"
-    
-    
-}
+//struct PublicData{
+//    @AppStorage("something") public var something: String = "something"
+//
+//
+//}

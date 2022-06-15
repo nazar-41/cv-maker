@@ -1,5 +1,5 @@
 //
-//  Details_Hobbies&InterestsView.swift
+//  Deatails_SkillsView.swift
 //  Belli-CV
 //
 //  Created by Belli's MacBook on 27/05/2022.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct Details_Hobbies_InterestsView: View {
-    @StateObject var viewModel = VM_HobbiesView()
+struct Details_SkillsView: View {
+    @StateObject var viewModel: VM_SkillsView = VM_SkillsView()
     
     var body: some View {
         
@@ -17,17 +17,22 @@ struct Details_Hobbies_InterestsView: View {
             Spacer()
                 .frame(height: 20)
             
-            viewModel.hobbiesInfoTitle
+            viewModel.skillsInfoTitle
             
             ScrollView(showsIndicators: false){
-                ForEach(viewModel.hobbiesArray){hobby in
+                
+                ForEach(viewModel.skillsArray){skill in
                     
                     VStack(alignment: .leading, spacing: 0){
-                        Text(hobby.hobby)
+                        Text(skill.skill)
                             .font(.system(size: 19, weight: .regular))
+
+                        Text(skill.level)
+                            .font(.system(size: 15))
+
                         
                         Divider().padding(.top)
-                        
+                            
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 10)
@@ -35,18 +40,19 @@ struct Details_Hobbies_InterestsView: View {
                     .background(.white)
                     .contextMenu{
                         Button {
-                            viewModel.removeHobby(id: hobby.id)
+                            viewModel.removeSkill(id: skill.id)
                         } label: {
                             Label("Delete", systemImage: "trash")
                         }
                     }
                 }
                 
+                
                 Button {
                     viewModel.openSheet = true
                 } label: {
                     HStack{
-                        Text("Add hobby...")
+                        Text("Add skill...")
                             .font(.system(size: 19, weight: .regular))
                             .foregroundColor(Color("c_continue_button"))
                         Spacer()
@@ -59,6 +65,7 @@ struct Details_Hobbies_InterestsView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 13, height: 13)
                                 .foregroundColor(Color("c_continue_button"))
+                                .font(.system(size: 1, weight: .bold))
                         }
                         .frame(width: 25, height: 25)
                         
@@ -73,14 +80,15 @@ struct Details_Hobbies_InterestsView: View {
         }
         .foregroundColor(Color("c_text"))
         .sheet(isPresented: $viewModel.openSheet) {
-            AddHobbySheet()
+            AddSkillSheet()
         }
     }
 }
 
-struct Details_Hobbies_InterestsView_Previews: PreviewProvider {
+
+struct Deatails_SkillsView_Previews: PreviewProvider {
     static var previews: some View {
-        Details_Hobbies_InterestsView()
+        Details_SkillsView()
     }
 }
 

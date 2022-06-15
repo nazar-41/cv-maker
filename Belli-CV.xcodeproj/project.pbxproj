@@ -8,6 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		A80F3EF02859AAAB00272CEB /* PublicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3EEF2859AAAB00272CEB /* PublicData.swift */; };
+		A80F3EF22859FD1400272CEB /* VM-HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3EF12859FD1400272CEB /* VM-HomeView.swift */; };
+		A80F3EF5285A062200272CEB /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3EF4285A062200272CEB /* ShareSheet.swift */; };
+		A80F3EF7285A083400272CEB /* VM_PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3EF6285A083400272CEB /* VM_PersonalInfo.swift */; };
+		A80F3EF9285A09B800272CEB /* VM_CareerObjective.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3EF8285A09B800272CEB /* VM_CareerObjective.swift */; };
+		A80F3EFB285A0AF600272CEB /* VM_ProfessionalExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3EFA285A0AF600272CEB /* VM_ProfessionalExperience.swift */; };
+		A80F3EFD285A0C0200272CEB /* AddPlaceOfWorkSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3EFC285A0C0200272CEB /* AddPlaceOfWorkSheet.swift */; };
+		A80F3EFF285A0CB700272CEB /* VM_AddPlaceOfWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3EFE285A0CB700272CEB /* VM_AddPlaceOfWork.swift */; };
+		A80F3F01285A112F00272CEB /* VM_EducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F00285A112F00272CEB /* VM_EducationView.swift */; };
+		A80F3F03285A11CF00272CEB /* AddEducationSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F02285A11CF00272CEB /* AddEducationSheet.swift */; };
+		A80F3F05285A120600272CEB /* VM_AddEducation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F04285A120600272CEB /* VM_AddEducation.swift */; };
+		A80F3F07285A13ED00272CEB /* VM_SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F06285A13ED00272CEB /* VM_SkillsView.swift */; };
+		A80F3F09285A159C00272CEB /* VM_AddSkillsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F08285A159C00272CEB /* VM_AddSkillsSheet.swift */; };
+		A80F3F0B285A15BF00272CEB /* AddSkillSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F0A285A15BF00272CEB /* AddSkillSheet.swift */; };
+		A80F3F0D285A180F00272CEB /* VM_LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F0C285A180F00272CEB /* VM_LanguagesView.swift */; };
+		A80F3F0F285A18CD00272CEB /* VM_AddLanguageSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F0E285A18CD00272CEB /* VM_AddLanguageSheet.swift */; };
+		A80F3F11285A190000272CEB /* AddLanguageSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F10285A190000272CEB /* AddLanguageSheet.swift */; };
+		A80F3F13285A1A3400272CEB /* VM_HobbiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F12285A1A3400272CEB /* VM_HobbiesView.swift */; };
+		A80F3F15285A1AD200272CEB /* AddHobbySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F14285A1AD200272CEB /* AddHobbySheet.swift */; };
+		A80F3F17285A1AFA00272CEB /* VM_AddHobbiesSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F16285A1AFA00272CEB /* VM_AddHobbiesSheet.swift */; };
+		A80F3F19285A1C1900272CEB /* VM_CertificatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F18285A1C1900272CEB /* VM_CertificatesView.swift */; };
+		A80F3F1B285A1CAC00272CEB /* AddCertificateSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F1A285A1CAC00272CEB /* AddCertificateSheet.swift */; };
+		A80F3F1D285A1CE600272CEB /* VM_AddCertificateSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F1C285A1CE600272CEB /* VM_AddCertificateSheet.swift */; };
 		A86262C5285862410046189B /* ChooseDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86262C4285862410046189B /* ChooseDesignView.swift */; };
 		A864E56A2845F12100EC68CD /* MultilineTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864E5692845F12100EC68CD /* MultilineTextfield.swift */; };
 		A87CF6FD2838B74100D1EBD3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF6FC2838B74100D1EBD3 /* ProfileView.swift */; };
@@ -24,7 +46,7 @@
 		A8AD28EB284099400000FD4B /* Details_CareerObjectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD28EA284099400000FD4B /* Details_CareerObjectiveView.swift */; };
 		A8AD28ED284099570000FD4B /* Details_ProfessionalExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD28EC284099570000FD4B /* Details_ProfessionalExperienceView.swift */; };
 		A8AD28EF2840996C0000FD4B /* Details_EducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD28EE2840996C0000FD4B /* Details_EducationView.swift */; };
-		A8AD28F1284099760000FD4B /* Deatails_SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD28F0284099760000FD4B /* Deatails_SkillsView.swift */; };
+		A8AD28F1284099760000FD4B /* Details_SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD28F0284099760000FD4B /* Details_SkillsView.swift */; };
 		A8AD28F3284099930000FD4B /* Details_LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD28F2284099930000FD4B /* Details_LanguagesView.swift */; };
 		A8AD28F5284099CD0000FD4B /* Details_Hobbies&InterestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD28F4284099CD0000FD4B /* Details_Hobbies&InterestsView.swift */; };
 		A8AD28F7284099DE0000FD4B /* Details_CertificatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD28F6284099DE0000FD4B /* Details_CertificatesView.swift */; };
@@ -36,11 +58,32 @@
 		A8D3AF9B2837C92400C73B5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8D3AF9A2837C92400C73B5A /* Preview Assets.xcassets */; };
 		A8D3AFA52837C96000C73B5A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D3AFA42837C96000C73B5A /* HomeView.swift */; };
 		A8D3AFA72837C96E00C73B5A /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D3AFA62837C96E00C73B5A /* SplashScreenView.swift */; };
-		A8FC6A1728423CE30074A625 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FC6A1628423CE30074A625 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A80F3EEF2859AAAB00272CEB /* PublicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicData.swift; sourceTree = "<group>"; };
+		A80F3EF12859FD1400272CEB /* VM-HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VM-HomeView.swift"; sourceTree = "<group>"; };
+		A80F3EF4285A062200272CEB /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		A80F3EF6285A083400272CEB /* VM_PersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_PersonalInfo.swift; sourceTree = "<group>"; };
+		A80F3EF8285A09B800272CEB /* VM_CareerObjective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_CareerObjective.swift; sourceTree = "<group>"; };
+		A80F3EFA285A0AF600272CEB /* VM_ProfessionalExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_ProfessionalExperience.swift; sourceTree = "<group>"; };
+		A80F3EFC285A0C0200272CEB /* AddPlaceOfWorkSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceOfWorkSheet.swift; sourceTree = "<group>"; };
+		A80F3EFE285A0CB700272CEB /* VM_AddPlaceOfWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_AddPlaceOfWork.swift; sourceTree = "<group>"; };
+		A80F3F00285A112F00272CEB /* VM_EducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_EducationView.swift; sourceTree = "<group>"; };
+		A80F3F02285A11CF00272CEB /* AddEducationSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationSheet.swift; sourceTree = "<group>"; };
+		A80F3F04285A120600272CEB /* VM_AddEducation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_AddEducation.swift; sourceTree = "<group>"; };
+		A80F3F06285A13ED00272CEB /* VM_SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_SkillsView.swift; sourceTree = "<group>"; };
+		A80F3F08285A159C00272CEB /* VM_AddSkillsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_AddSkillsSheet.swift; sourceTree = "<group>"; };
+		A80F3F0A285A15BF00272CEB /* AddSkillSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillSheet.swift; sourceTree = "<group>"; };
+		A80F3F0C285A180F00272CEB /* VM_LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_LanguagesView.swift; sourceTree = "<group>"; };
+		A80F3F0E285A18CD00272CEB /* VM_AddLanguageSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_AddLanguageSheet.swift; sourceTree = "<group>"; };
+		A80F3F10285A190000272CEB /* AddLanguageSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLanguageSheet.swift; sourceTree = "<group>"; };
+		A80F3F12285A1A3400272CEB /* VM_HobbiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_HobbiesView.swift; sourceTree = "<group>"; };
+		A80F3F14285A1AD200272CEB /* AddHobbySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHobbySheet.swift; sourceTree = "<group>"; };
+		A80F3F16285A1AFA00272CEB /* VM_AddHobbiesSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_AddHobbiesSheet.swift; sourceTree = "<group>"; };
+		A80F3F18285A1C1900272CEB /* VM_CertificatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_CertificatesView.swift; sourceTree = "<group>"; };
+		A80F3F1A285A1CAC00272CEB /* AddCertificateSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCertificateSheet.swift; sourceTree = "<group>"; };
+		A80F3F1C285A1CE600272CEB /* VM_AddCertificateSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_AddCertificateSheet.swift; sourceTree = "<group>"; };
 		A86262C4285862410046189B /* ChooseDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDesignView.swift; sourceTree = "<group>"; };
 		A864E5692845F12100EC68CD /* MultilineTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextfield.swift; sourceTree = "<group>"; };
 		A876F682284F940000DF89FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -57,7 +100,7 @@
 		A8AD28EA284099400000FD4B /* Details_CareerObjectiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details_CareerObjectiveView.swift; sourceTree = "<group>"; };
 		A8AD28EC284099570000FD4B /* Details_ProfessionalExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details_ProfessionalExperienceView.swift; sourceTree = "<group>"; };
 		A8AD28EE2840996C0000FD4B /* Details_EducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details_EducationView.swift; sourceTree = "<group>"; };
-		A8AD28F0284099760000FD4B /* Deatails_SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deatails_SkillsView.swift; sourceTree = "<group>"; };
+		A8AD28F0284099760000FD4B /* Details_SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details_SkillsView.swift; sourceTree = "<group>"; };
 		A8AD28F2284099930000FD4B /* Details_LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details_LanguagesView.swift; sourceTree = "<group>"; };
 		A8AD28F4284099CD0000FD4B /* Details_Hobbies&InterestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details_Hobbies&InterestsView.swift"; sourceTree = "<group>"; };
 		A8AD28F6284099DE0000FD4B /* Details_CertificatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details_CertificatesView.swift; sourceTree = "<group>"; };
@@ -70,7 +113,6 @@
 		A8D3AF9A2837C92400C73B5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A8D3AFA42837C96000C73B5A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A8D3AFA62837C96E00C73B5A /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
-		A8FC6A1628423CE30074A625 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +127,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A80F3EF3285A060F00272CEB /* Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				A80F3EF4285A062200272CEB /* ShareSheet.swift */,
+				A80F3EFC285A0C0200272CEB /* AddPlaceOfWorkSheet.swift */,
+				A80F3F0A285A15BF00272CEB /* AddSkillSheet.swift */,
+				A80F3F10285A190000272CEB /* AddLanguageSheet.swift */,
+				A80F3F1A285A1CAC00272CEB /* AddCertificateSheet.swift */,
+				A80F3F14285A1AD200272CEB /* AddHobbySheet.swift */,
+				A80F3F02285A11CF00272CEB /* AddEducationSheet.swift */,
+			);
+			path = Sheet;
+			sourceTree = "<group>";
+		};
 		A87CF700283908C400D1EBD3 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +180,7 @@
 		A8D3AF922837C92200C73B5A /* Belli-CV */ = {
 			isa = PBXGroup;
 			children = (
+				A80F3EF3285A060F00272CEB /* Sheet */,
 				A8F20E03285707EF00F9317A /* PDFGenerator */,
 				A8D159B92854AF530034DD6A /* Extensions */,
 				A87CF700283908C400D1EBD3 /* Navigation */,
@@ -156,14 +213,13 @@
 				A8AD28EC284099570000FD4B /* Details_ProfessionalExperienceView.swift */,
 				A8AD28EE2840996C0000FD4B /* Details_EducationView.swift */,
 				A86262C4285862410046189B /* ChooseDesignView.swift */,
-				A8AD28F0284099760000FD4B /* Deatails_SkillsView.swift */,
+				A8AD28F0284099760000FD4B /* Details_SkillsView.swift */,
 				A8AD28F2284099930000FD4B /* Details_LanguagesView.swift */,
 				A8AD28F4284099CD0000FD4B /* Details_Hobbies&InterestsView.swift */,
 				A8AD28F6284099DE0000FD4B /* Details_CertificatesView.swift */,
 				A8D3AFA62837C96E00C73B5A /* SplashScreenView.swift */,
 				A88D794B283E48AC00990656 /* CVDetailsView.swift */,
 				A864E5692845F12100EC68CD /* MultilineTextfield.swift */,
-				A8FC6A1628423CE30074A625 /* test.swift */,
 				A87CF6FC2838B74100D1EBD3 /* ProfileView.swift */,
 				A88D7949283E021600990656 /* NewCVView.swift */,
 				A8B3AE0E2853305100E05FDA /* ResultView.swift */,
@@ -183,6 +239,21 @@
 		A8D3AFA32837C94E00C73B5A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A80F3EF12859FD1400272CEB /* VM-HomeView.swift */,
+				A80F3EF6285A083400272CEB /* VM_PersonalInfo.swift */,
+				A80F3EF8285A09B800272CEB /* VM_CareerObjective.swift */,
+				A80F3EFA285A0AF600272CEB /* VM_ProfessionalExperience.swift */,
+				A80F3F04285A120600272CEB /* VM_AddEducation.swift */,
+				A80F3F1C285A1CE600272CEB /* VM_AddCertificateSheet.swift */,
+				A80F3F08285A159C00272CEB /* VM_AddSkillsSheet.swift */,
+				A80F3F16285A1AFA00272CEB /* VM_AddHobbiesSheet.swift */,
+				A80F3F06285A13ED00272CEB /* VM_SkillsView.swift */,
+				A80F3F12285A1A3400272CEB /* VM_HobbiesView.swift */,
+				A80F3F0C285A180F00272CEB /* VM_LanguagesView.swift */,
+				A80F3F00285A112F00272CEB /* VM_EducationView.swift */,
+				A80F3F18285A1C1900272CEB /* VM_CertificatesView.swift */,
+				A80F3F0E285A18CD00272CEB /* VM_AddLanguageSheet.swift */,
+				A80F3EFE285A0CB700272CEB /* VM_AddPlaceOfWork.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -271,7 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8AD28ED284099570000FD4B /* Details_ProfessionalExperienceView.swift in Sources */,
-				A8AD28F1284099760000FD4B /* Deatails_SkillsView.swift in Sources */,
+				A8AD28F1284099760000FD4B /* Details_SkillsView.swift in Sources */,
 				A864E56A2845F12100EC68CD /* MultilineTextfield.swift in Sources */,
 				A8822F37284DE7B700263AB9 /* InfoModels.swift in Sources */,
 				A8D3AFA52837C96000C73B5A /* HomeView.swift in Sources */,
@@ -280,23 +351,44 @@
 				A87CF709283908FC00D1EBD3 /* CustomNavBarContainerView.swift in Sources */,
 				A8AD28EF2840996C0000FD4B /* Details_EducationView.swift in Sources */,
 				A8D3AF962837C92200C73B5A /* ContentView.swift in Sources */,
+				A80F3EF5285A062200272CEB /* ShareSheet.swift in Sources */,
 				A80F3EF02859AAAB00272CEB /* PublicData.swift in Sources */,
 				A87CF706283908FC00D1EBD3 /* CustomNavLink.swift in Sources */,
+				A80F3F0D285A180F00272CEB /* VM_LanguagesView.swift in Sources */,
+				A80F3EF22859FD1400272CEB /* VM-HomeView.swift in Sources */,
+				A80F3EFB285A0AF600272CEB /* VM_ProfessionalExperience.swift in Sources */,
 				A8AD28EB284099400000FD4B /* Details_CareerObjectiveView.swift in Sources */,
 				A87CF6FD2838B74100D1EBD3 /* ProfileView.swift in Sources */,
 				A8AD28E9284098ED0000FD4B /* Details_PersonalInfoView.swift in Sources */,
 				A87CF70A283908FC00D1EBD3 /* CustomNavBarView.swift in Sources */,
+				A80F3EFD285A0C0200272CEB /* AddPlaceOfWorkSheet.swift in Sources */,
+				A80F3F01285A112F00272CEB /* VM_EducationView.swift in Sources */,
+				A80F3F0B285A15BF00272CEB /* AddSkillSheet.swift in Sources */,
 				A87CF708283908FC00D1EBD3 /* CustomNavView.swift in Sources */,
 				A8D3AF942837C92200C73B5A /* Belli_CVApp.swift in Sources */,
+				A80F3F13285A1A3400272CEB /* VM_HobbiesView.swift in Sources */,
 				A8D159BB2854AF6F0034DD6A /* CustomExtensions.swift in Sources */,
+				A80F3F17285A1AFA00272CEB /* VM_AddHobbiesSheet.swift in Sources */,
 				A8AD28F3284099930000FD4B /* Details_LanguagesView.swift in Sources */,
+				A80F3F03285A11CF00272CEB /* AddEducationSheet.swift in Sources */,
+				A80F3F1D285A1CE600272CEB /* VM_AddCertificateSheet.swift in Sources */,
 				A86262C5285862410046189B /* ChooseDesignView.swift in Sources */,
+				A80F3F19285A1C1900272CEB /* VM_CertificatesView.swift in Sources */,
 				A87CF707283908FC00D1EBD3 /* CustomNavBarPreferenceKeys.swift in Sources */,
 				A88D794C283E48AD00990656 /* CVDetailsView.swift in Sources */,
+				A80F3F1B285A1CAC00272CEB /* AddCertificateSheet.swift in Sources */,
+				A80F3F15285A1AD200272CEB /* AddHobbySheet.swift in Sources */,
 				A8AD28F7284099DE0000FD4B /* Details_CertificatesView.swift in Sources */,
 				A8AD28F5284099CD0000FD4B /* Details_Hobbies&InterestsView.swift in Sources */,
+				A80F3F05285A120600272CEB /* VM_AddEducation.swift in Sources */,
+				A80F3F0F285A18CD00272CEB /* VM_AddLanguageSheet.swift in Sources */,
 				A8D3AFA72837C96E00C73B5A /* SplashScreenView.swift in Sources */,
-				A8FC6A1728423CE30074A625 /* test.swift in Sources */,
+				A80F3F07285A13ED00272CEB /* VM_SkillsView.swift in Sources */,
+				A80F3F09285A159C00272CEB /* VM_AddSkillsSheet.swift in Sources */,
+				A80F3EF9285A09B800272CEB /* VM_CareerObjective.swift in Sources */,
+				A80F3F11285A190000272CEB /* AddLanguageSheet.swift in Sources */,
+				A80F3EFF285A0CB700272CEB /* VM_AddPlaceOfWork.swift in Sources */,
+				A80F3EF7285A083400272CEB /* VM_PersonalInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

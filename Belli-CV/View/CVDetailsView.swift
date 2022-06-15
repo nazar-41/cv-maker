@@ -60,7 +60,7 @@ struct CVDetailsView: View {
                             savedIconBackgroundColor: .yellow,
                             icon: "pencil.slash",
                             itemName: "Skills",
-                            navigateTo: AnyView(Deatails_SkillsView()),
+                            navigateTo: AnyView(Details_SkillsView()),
                             checkArr: skillsArray)
                         
                         DetailsItemView(

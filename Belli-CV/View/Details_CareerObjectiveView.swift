@@ -8,37 +8,14 @@
 import SwiftUI
 
 struct Details_CareerObjectiveView: View {
-    @AppStorage("position") var position: String = ""
-    @AppStorage("personalStatement") var personalStatement: String = ""
-    
-    var personalStatementTextfieldPlaceholder = "A conscientious and professional sales manager with extensive experience in sales and strategic planning currently seeking a new position as a Marketing Director."
-    
-    
-    private var positionInfoTitle: some View {
-        VStack(alignment: .leading){
-            Text("Position")
-                .font(.title)
-                .fontWeight(.medium)
-            Divider()
-            
-        }.padding(.vertical, 5)
-    }
-    private var personalStatementInfoTitle: some View {
-        VStack(alignment: .leading){
-            Text("Personal Statement")
-                .font(.title)
-                .fontWeight(.medium)
-            Divider()
-            
-        }.padding(.vertical, 5)
-    }
+    @StateObject var viewModel: VM_DetailsCareerObjectiveView = VM_DetailsCareerObjectiveView()
     
     var body: some View {
         VStack {
             VStack(spacing: 0){
-                positionInfoTitle
+                viewModel.positionInfoTitle
                 
-                TextField("Marketing Director", text: $position)
+                TextField("Marketing Director", text: $viewModel.position)
                     .submitLabel(.continue)
                     .padding(.bottom, 5)
                     .font(.system(size: 20, weight: .regular))
@@ -47,13 +24,13 @@ struct Details_CareerObjectiveView: View {
                 
                 Spacer()
                     .frame(height: 30)
-                personalStatementInfoTitle
+                viewModel.personalStatementInfoTitle
             }
             .onTapGesture {
-                endEditing()
+                viewModel.endEditing()
             }
             
-            MultilineTextfield(placeholder: personalStatementTextfieldPlaceholder, text: $personalStatement)
+            MultilineTextfield(placeholder: viewModel.personalStatementTextfieldPlaceholder, text: $viewModel.personalStatement)
             //.background(.clear)
             //.frame(maxHeight: 300)
                 .disableAutocorrection(true)
@@ -66,9 +43,7 @@ struct Details_CareerObjectiveView: View {
         .edgesIgnoringSafeArea(.all)
     }
     
-    private func endEditing() {
-        UIApplication.shared.endEditing()
-    }
+
 }
 
 struct Details_CareerObjectiveView_Previews: PreviewProvider {

@@ -6,130 +6,17 @@
 //
 
 import SwiftUI
-//import SwiftfulSaving
 
 struct HomeView: View {
-    //@State private var isCreated: Bool = false
-    var isCreated: Bool {
-        if position.isEmpty{
-            return false
-        }else{
-            return true
-        }
-    }
-    
-    
-    @State private var profileImage: UIImage? = nil
-    
-    
-    
-    //MARK: - Personal Info
-    @AppStorage("fullName") var fullName: String = ""
-    @AppStorage("birthDate") var birthDate: Date = Date()
-    
-    @AppStorage("email") var email: String = ""
-    @AppStorage("phone") var phone: String = ""
-    @AppStorage("address") var address: String = ""
-    @AppStorage("postcode") var postcode: String = ""
-    @AppStorage("city") var city: String = ""
-    @AppStorage("region") var region: String = ""
-    @AppStorage("country") var country: String = ""
-    
-    
-    //MARK: - Career Objective
-    @AppStorage("personalStatement") var personalStatement: String = ""
-    @AppStorage("position") var position: String = ""
-    
-    //MARK: - Professional Experience
-    @AppStorage("workedPlacesArray") var workedPlacesArray: [WorkedPlaceModel] = []
-    
-    //MARK: - Education
-    @AppStorage("educationArray") var educationArray: [EducationModel] = []
-    
-    //MARK: - Skills
-    @AppStorage("skillsArray") var skillsArray: [SkillModel] = []
-    
-    //MARK: - Languages
-    @AppStorage("languagesArray") var languagesArray: [LanguageModel] = []
-    
-    //MARK: - Hobbies
-    @AppStorage("hobbiesArray") var hobbiesArray: [HobbiesModel] = []
-    
-    //MARK: - Certificates
-    @AppStorage("certificatesArray") var certificateArray: [CertificateModel] = []
-    
-    
-    @State private var showSheet: Bool = false
-    
-    var calculate: Int {
-        var totalScore: Int = 3
-        
-        if !fullName.isEmpty{
-            totalScore += 1
-        }
-        if !birthDate.rawValue.isEmpty{
-            totalScore += 1
-        }
-        if !email.isEmpty{
-            totalScore += 1
-        }
-        if !phone.isEmpty{
-            totalScore += 1
-        }
-        if !address.isEmpty{
-            totalScore += 1
-        }
-        if !postcode.isEmpty{
-            totalScore += 1
-        }
-        if !city.isEmpty{
-            totalScore += 1
-        }
-        if !region.isEmpty{
-            totalScore += 1
-        }
-        if !country.isEmpty{
-            totalScore += 1
-        }
-        if !personalStatement.isEmpty{
-            totalScore += 1
-        }
-        if !position .isEmpty{
-            totalScore += 1
-        }
-        if !workedPlacesArray.isEmpty{
-            totalScore += 1
-        }
-        if !educationArray.isEmpty{
-            totalScore += 1
-        }
-        if !skillsArray.isEmpty{
-            totalScore += 1
-        }
-        if !languagesArray.isEmpty{
-            totalScore += 1
-        }
-        if !hobbiesArray.isEmpty{
-            totalScore += 1
-        }
-        if !certificateArray .isEmpty{
-            totalScore += 1
-        }
-        
-        
-        return Int(totalScore * 5)
-    }
-    
+    @StateObject var viewModel: VM_HomeView = VM_HomeView()
     
     var body: some View {
         CustomNavView {
             
             VStack {
-                CustomNavLink(destination: ProfileView().customNavBarItems(dividerLineHidden: true)) {
-//                    ProfileIconView(profileImage: profileImage)
-                    HStack{
-                        Spacer()
-                        
+                HStack{
+                    Spacer()
+                    CustomNavLink(destination: ProfileView().customNavBarItems(dividerLineHidden: true)) {
                         ZStack{
                             Color("c_continue_button")
                             
@@ -146,21 +33,15 @@ struct HomeView: View {
                     }
                 }
                 
-                DetectCreatedCV(showSheet: $showSheet, completed: calculate)
+                DetectCreatedCV(showSheet: $viewModel.showSheet, position: viewModel.position, workedPlacesArray: viewModel.workedPlacesArray, dc: viewModel.dc, createdDate: viewModel.createdDate, completed: viewModel.calculate)
                 
             }
             .customNavBarItems(backButtonHidden: true, dividerLineHidden: true)
             
             Spacer()
         }
-        .sheet(isPresented: $showSheet) {
+        .sheet(isPresented: $viewModel.showSheet) {
             ResultView()
-        }
-        .onAppear {
-            print(PublicData().something)
-            PublicData().something = "new data"
-            print(PublicData().something)
-            
         }
     }
 }
@@ -212,21 +93,18 @@ struct CreateNewCVCardView: View {
 
 struct CVCardHomeView: View{
     
-    @AppStorage("position") var position: String = ""
-    @AppStorage("workedPlacesArray") var workedPlacesArray: [WorkedPlaceModel] = []
     
     @StateObject var viewModel = ShareSheetViewModel()
-    //MARK: Pdf properties
-
-    @AppStorage("designColor") var dc: DesignColors = .d1
     
-    @AppStorage("createdDate") var createdDate: Date = .now
-
+    var position: String
+    var workedPlacesArray: [WorkedPlaceModel]
+    var dc: DesignColors
+    var createdDate: Date
     var completed: Int
     
     var body: some View{
         ZStack {
-            Color(dc.rawValue)
+            Color("c_continue_button")
                 .cornerRadius(20)
             
             VStack(alignment: .leading){
@@ -236,27 +114,27 @@ struct CVCardHomeView: View{
                     
                     Spacer()
                     
-                                        VStack(alignment: .trailing){
-                                            HStack{
-                                                Text("completed")
-                                                    .font(.system(size: 16, weight: .medium))
-                    
-                                                Text("\(completed)%")
-                                                    .font(.system(size: 16, weight: .heavy))
-                                            }
-                                            ZStack{
-                                                HStack{
-                                                    Color.green.opacity(0.15).cornerRadius(3)
-                                                    Spacer()
-                                                }
-                                                HStack{
-                                                    Color.green.frame(width: CGFloat(Double(completed) * 1.5)).cornerRadius(3)
-                                                    Spacer()
-                                                }
-                                            }
-                                            .frame(width: 150, height: 6)
-                                            .cornerRadius(3)
-                                        }
+                    VStack(alignment: .trailing){
+                        HStack{
+                            Text("completed")
+                                .font(.system(size: 16, weight: .medium))
+                            
+                            Text("\(completed)%")
+                                .font(.system(size: 16, weight: .heavy))
+                        }
+                        ZStack{
+                            HStack{
+                                Color.green.opacity(0.15).cornerRadius(3)
+                                Spacer()
+                            }
+                            HStack{
+                                Color.green.frame(width: CGFloat(Double(completed) * 1.5)).cornerRadius(3)
+                                Spacer()
+                            }
+                        }
+                        .frame(width: 150, height: 6)
+                        .cornerRadius(3)
+                    }
                 }
                 
                 VStack{
@@ -290,7 +168,6 @@ struct CVCardHomeView: View{
                         Text(createdDate, format: .dateTime.month().day().year())
                             .foregroundColor(.white.opacity(0.8))
                             .font(.system(size: 12, weight: .medium))
-
                         
                         Spacer()
                         
@@ -298,10 +175,8 @@ struct CVCardHomeView: View{
                             .rotationEffect(Angle(degrees: 90))
                             .padding(.vertical)
                             .foregroundColor(.white.opacity(0.8))
-
+                        
                     }
-                    
-                       // .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 .padding(.top, 10)
                 
@@ -322,9 +197,9 @@ struct CVCardHomeView: View{
                                 
                                 HStack{
                                     Image(systemName: "doc.badge.gearshape")
-                                        .foregroundColor(Color(dc.rawValue))
+                                        .foregroundColor(Color("c_continue_button"))
                                         .font(.system(size: 25))
-                                    //.background(.red) 
+                                    //.background(.red)
                                         .frame(width: 50)
                                     
                                     Spacer()
@@ -349,8 +224,8 @@ struct CVCardHomeView: View{
                                     print("failed to produce pdf file")
                                 }
                             }
-
-
+                            
+                            
                         } label: {
                             ZStack{
                                 Color.white
@@ -358,7 +233,7 @@ struct CVCardHomeView: View{
                                     .cornerRadius(8)
                                 
                                 Image(systemName: "paperplane.fill")
-                                    .foregroundColor(Color(dc.rawValue))
+                                    .foregroundColor(Color("c_continue_button"))
                                     .font(.system(size: 25))
                                 
                             }
@@ -376,17 +251,20 @@ struct CVCardHomeView: View{
             .padding(20)
         }
         .frame(width: 300, height: 550)
-
         .padding(.top)
         .foregroundColor(.white)
     }
 }
 
-
 struct DetectCreatedCV: View{
-    @AppStorage("position") var position: String = ""
+    //@AppStorage("position") var position: String = ""
     
     @Binding var showSheet: Bool
+    
+    var position: String
+    var workedPlacesArray: [WorkedPlaceModel]
+    var dc: DesignColors
+    var createdDate: Date
     
     var completed: Int
     
@@ -403,32 +281,16 @@ struct DetectCreatedCV: View{
             CustomNavLink(destination: NewCVView().customNavBarItems(dividerLineHidden: true)) {
                 CreateNewCVCardView()
             }
-
+            
             .opacity(isCreated ? 0 : 1)
             
-            CVCardHomeView(completed: completed).opacity(isCreated ? 1 : 0)
+            CVCardHomeView(position: position, workedPlacesArray: workedPlacesArray, dc: dc, createdDate: createdDate, completed: completed).opacity(isCreated ? 1 : 0)
                 .onTapGesture {
                     showSheet = true
                 }
         }
     }
 }
-
-
-struct ShareSheet: UIViewControllerRepresentable{
-    var urls: [Any]
-    
-    func makeUIViewController(context: Context) -> UIActivityViewController {
-        let controller = UIActivityViewController(activityItems: urls, applicationActivities: nil)
-        
-        return controller
-    }
-    
-    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {
-        
-    }
-}
-
 
 class ShareSheetViewModel: ObservableObject{
     @Published var pdfURL: URL?
