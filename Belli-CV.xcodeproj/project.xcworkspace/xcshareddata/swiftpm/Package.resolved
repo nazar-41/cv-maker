@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftfulSaving",
+        "repositoryURL": "https://github.com/SwiftfulThinking/SwiftfulSaving",
+        "state": {
+          "branch": "main",
+          "revision": "688396277ba9e8999498dc975b80221b5afd5161",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
