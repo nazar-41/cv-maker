@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomNavView<Content:View>: View {
-    
+    //@Environment(\.colorScheme) var colorScheme
     let content: Content
     
     init(@ViewBuilder content: () -> Content) {
@@ -23,6 +23,7 @@ struct CustomNavView<Content:View>: View {
             .navigationBarHidden(true)
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        //.background(Color("c_white"))
 //        .navigationViewStyle(.stack)
     }
 }
@@ -30,7 +31,7 @@ struct CustomNavView<Content:View>: View {
 struct CustomNavView_Previews: PreviewProvider {
     static var previews: some View {
         CustomNavView {
-            Color.red.ignoresSafeArea()
+            Color("c_white").ignoresSafeArea()
         }
     }
 }

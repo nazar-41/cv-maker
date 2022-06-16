@@ -158,8 +158,10 @@ struct AddPlaceOfWorkSheet: View{
             .onTapGesture {
                 viewModel.endEditing()
             }
+            .background(Color("c_white"))
             
         }
+        .background(Color("c_white"))
     }
 }
 

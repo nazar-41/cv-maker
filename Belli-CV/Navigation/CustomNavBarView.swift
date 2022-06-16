@@ -38,6 +38,7 @@ struct CustomNavBarView: View {
                 dividerLine
             }
         }
+       // .background(Color("c_white"))
     }
 }
 

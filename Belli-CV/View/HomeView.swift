@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel: VM_HomeView = VM_HomeView()
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         CustomNavView {
@@ -19,7 +20,6 @@ struct HomeView: View {
                     CustomNavLink(destination: ProfileView().customNavBarItems(dividerLineHidden: true)) {
                         ZStack{
                             Color("c_continue_button")
-                            
                             Image(systemName: "person.fill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
@@ -32,9 +32,7 @@ struct HomeView: View {
                         .padding()
                     }
                 }
-                
                 DetectCreatedCV(showSheet: $viewModel.showSheet, position: viewModel.position, workedPlacesArray: viewModel.workedPlacesArray, dc: viewModel.dc, createdDate: viewModel.createdDate, completed: viewModel.calculate)
-                
             }
             .customNavBarItems(backButtonHidden: true, dividerLineHidden: true)
             
@@ -49,6 +47,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .preferredColorScheme(.dark)
     }
 }
 

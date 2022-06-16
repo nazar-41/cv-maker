@@ -58,12 +58,14 @@ struct ResultView: View {
                 }//.padding(.vertical)
             }.frame(minWidth: UIScreen.main.bounds.width, minHeight: UIScreen.main.bounds.height - 50)
         }
+        .foregroundColor(Color("c_text"))
     }
 }
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
         ResultView()
+            .preferredColorScheme(.dark)
     }
 }
 
@@ -115,7 +117,7 @@ struct SmallPersonalDetailsInResultCV: View{
     
     var body: some View{
         ZStack{
-            Color.gray.opacity(0.2)
+            Color("c_screen_background")
                 .frame(width: 150)
             
             VStack{

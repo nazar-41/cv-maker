@@ -98,6 +98,8 @@ struct ProfileView: View {
                 .submitLabel(.continue)
                 .disableAutocorrection(true)
                 .autocapitalization(.none)
+
+                
             
             Divider()
         }.padding(.vertical, 5) // Full name
@@ -111,6 +113,7 @@ struct ProfileView: View {
                 .disableAutocorrection(true)
                 .autocapitalization(.none)
                 .keyboardType(UIKeyboardType.phonePad)
+
             
             Divider()
         }.padding(.vertical, 5) // Full name
@@ -120,8 +123,6 @@ struct ProfileView: View {
         guard let inputImage = inputImage else { return }
         
         profileImage = Image(uiImage: inputImage)
-    
-
     }
     
     var body: some View {
@@ -227,6 +228,7 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+            .preferredColorScheme(.dark)
     }
 }
 
