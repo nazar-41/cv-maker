@@ -8,17 +8,9 @@ Native iOS application that generates CV as PDF file from your personal informat
 
 ## Choose your design...
 <style>
-.flex-container {
-  display: flex;
-  background-color: DodgerBlue;
-}
-
-.flex-container > img {
-  background-color: #f1f1f1;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
-}
+  .flex-container {
+    display: flex;
+  }
 </style>
 
 <div class="flex-container">
