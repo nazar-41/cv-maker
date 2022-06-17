@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct Details_ProfessionalExperienceView: View {
+struct Details_ProfessionalExperienceView: View{
     @StateObject var viewModel: VM_ProfessionalExperience = VM_ProfessionalExperience()
         
-    var body: some View {
+    var body: some View{
         ZStack {
             VStack(spacing: 0){
                 
@@ -130,5 +130,3 @@ struct YesNoSwitch: View{
         }
     }
 }
-
-

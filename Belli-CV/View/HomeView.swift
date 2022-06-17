@@ -32,7 +32,7 @@ struct HomeView: View {
                         .padding()
                     }
                 }
-                DetectCreatedCV(showSheet: $viewModel.showSheet, position: viewModel.position, workedPlacesArray: viewModel.workedPlacesArray, dc: viewModel.dc, createdDate: viewModel.createdDate, completed: viewModel.calculate)
+                DetectCreatedCV(showSheet: $viewModel.showSheet, showSuccessAlert: $viewModel.showSuccessAlert, position: viewModel.position, workedPlacesArray: viewModel.workedPlacesArray, dc: viewModel.dc, createdDate: viewModel.createdDate, completed: viewModel.calculate)
             }
             .customNavBarItems(backButtonHidden: true, dividerLineHidden: true)
             
@@ -99,6 +99,8 @@ struct CVCardHomeView: View{
     var dc: DesignColors
     var createdDate: Date
     var completed: Int
+    
+    @Binding var showSuccessAlert: Bool
     
     var body: some View{
         ZStack {
@@ -238,6 +240,7 @@ struct CVCardHomeView: View{
                         }
                         .sheet(isPresented: $viewModel.showShareSheet) {
                             viewModel.pdfURL = nil
+                            showSuccessAlert = true
                         } content: {
                             if let pdfURL = viewModel.pdfURL {
                                 ShareSheet(urls: [pdfURL])
@@ -251,6 +254,9 @@ struct CVCardHomeView: View{
         .frame(width: 300, height: 550)
         .padding(.top)
         .foregroundColor(.white)
+        .alert(isPresented: $showSuccessAlert) {
+                    Alert(title: Text("Success 🎉"), message: Text("Check your files to see your CV"), dismissButton: .default(Text("Got it!")))
+                }
     }
 }
 
@@ -258,6 +264,7 @@ struct DetectCreatedCV: View{
     //@AppStorage("position") var position: String = ""
     
     @Binding var showSheet: Bool
+    @Binding var showSuccessAlert: Bool
     
     var position: String
     var workedPlacesArray: [WorkedPlaceModel]
@@ -282,7 +289,7 @@ struct DetectCreatedCV: View{
             
             .opacity(isCreated ? 0 : 1)
             
-            CVCardHomeView(position: position, workedPlacesArray: workedPlacesArray, dc: dc, createdDate: createdDate, completed: completed).opacity(isCreated ? 1 : 0)
+            CVCardHomeView(position: position, workedPlacesArray: workedPlacesArray, dc: dc, createdDate: createdDate, completed: completed, showSuccessAlert: $showSuccessAlert).opacity(isCreated ? 1 : 0)
                 .onTapGesture {
                     showSheet = true
                 }

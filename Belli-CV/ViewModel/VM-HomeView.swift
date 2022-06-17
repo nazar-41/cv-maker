@@ -11,6 +11,7 @@ import SwiftUI
 
 class VM_HomeView: ObservableObject{
     @Published var showSheet: Bool = false
+    @Published var showSuccessAlert: Bool = false
 
     
     //MARK: - Personal Info
