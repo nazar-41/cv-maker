@@ -3,10 +3,7 @@ Native iOS application that generates CV as PDF file from your personal informat
 
 ## How it works?
 
-<video width="270" height="480" controls>
-  <source src="screenshots/v1.gif" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<img src="screenshots/v1.gif" width=270 height=480>
 
 
 ## Choose your design...
