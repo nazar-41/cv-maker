@@ -17,3 +17,6 @@ Native iOS application that generates CV as PDF file from your personal informat
 <img src="screenshots/d4.PNG" width=300>
   
 </div>
+
+
+## Basic Usage
