@@ -153,7 +153,6 @@ struct AddEducationSheet: View{
                                     .datePickerStyle(WheelDatePickerStyle())
                             }
                         }
-                        
                     }
                     
                     HStack{
@@ -176,6 +175,5 @@ struct AddEducationSheet: View{
             }
         }
     }
-
 }
 
