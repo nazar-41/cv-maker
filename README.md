@@ -8,8 +8,7 @@ Native iOS application that generates CV as PDF file from your personal informat
 
 ## Choose your design...
 
-    <img src="screenshots/d1.PNG" width=270 height=550>
-    <img src="screenshots/d2.PNG" width=270 height=550>
-    <img src="screenshots/d3.PNG" width=270 height=550>
-    <img src="screenshots/d4.PNG" width=270 height=550>
-
+<div><img src="screenshots/d1.PNG" width=270 height=600></div>
+<div><img src="screenshots/d2.PNG" width=270 height=600></div>
+<div><img src="screenshots/d3.PNG" width=270 height=600></div>
+<div><img src="screenshots/d4.PNG" width=270 height=600></div>
