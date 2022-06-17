@@ -30,6 +30,7 @@
 		A80F3F19285A1C1900272CEB /* VM_CertificatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F18285A1C1900272CEB /* VM_CertificatesView.swift */; };
 		A80F3F1B285A1CAC00272CEB /* AddCertificateSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F1A285A1CAC00272CEB /* AddCertificateSheet.swift */; };
 		A80F3F1D285A1CE600272CEB /* VM_AddCertificateSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F3F1C285A1CE600272CEB /* VM_AddCertificateSheet.swift */; };
+		A82895CA285C9B0E00B1AD9A /* PDF-Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82895C9285C9B0E00B1AD9A /* PDF-Generator.swift */; };
 		A86262C5285862410046189B /* ChooseDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86262C4285862410046189B /* ChooseDesignView.swift */; };
 		A864E56A2845F12100EC68CD /* MultilineTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864E5692845F12100EC68CD /* MultilineTextfield.swift */; };
 		A87CF6FD2838B74100D1EBD3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF6FC2838B74100D1EBD3 /* ProfileView.swift */; };
@@ -84,6 +85,7 @@
 		A80F3F18285A1C1900272CEB /* VM_CertificatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_CertificatesView.swift; sourceTree = "<group>"; };
 		A80F3F1A285A1CAC00272CEB /* AddCertificateSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCertificateSheet.swift; sourceTree = "<group>"; };
 		A80F3F1C285A1CE600272CEB /* VM_AddCertificateSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_AddCertificateSheet.swift; sourceTree = "<group>"; };
+		A82895C9285C9B0E00B1AD9A /* PDF-Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PDF-Generator.swift"; sourceTree = "<group>"; };
 		A86262C4285862410046189B /* ChooseDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDesignView.swift; sourceTree = "<group>"; };
 		A864E5692845F12100EC68CD /* MultilineTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextfield.swift; sourceTree = "<group>"; };
 		A876F682284F940000DF89FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 		A8F20E03285707EF00F9317A /* PDFGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				A82895C9285C9B0E00B1AD9A /* PDF-Generator.swift */,
 			);
 			path = PDFGenerator;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				A87CF707283908FC00D1EBD3 /* CustomNavBarPreferenceKeys.swift in Sources */,
 				A88D794C283E48AD00990656 /* CVDetailsView.swift in Sources */,
 				A80F3F1B285A1CAC00272CEB /* AddCertificateSheet.swift in Sources */,
+				A82895CA285C9B0E00B1AD9A /* PDF-Generator.swift in Sources */,
 				A80F3F15285A1AD200272CEB /* AddHobbySheet.swift in Sources */,
 				A8AD28F7284099DE0000FD4B /* Details_CertificatesView.swift in Sources */,
 				A8AD28F5284099CD0000FD4B /* Details_Hobbies&InterestsView.swift in Sources */,
