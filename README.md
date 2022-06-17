@@ -5,9 +5,7 @@ Native iOS application that generates CV as PDF file from your personal informat
 
 <div><img src="screenshots/v1.gif" width=300></div>
 
-
 ## Choose your design...
-
 
 <div>
 
@@ -17,6 +15,3 @@ Native iOS application that generates CV as PDF file from your personal informat
 <img src="screenshots/d4.PNG" width=300>
   
 </div>
-
-
-## Basic Usage
